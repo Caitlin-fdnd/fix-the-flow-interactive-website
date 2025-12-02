@@ -8,12 +8,12 @@ Leer met het JavaScript 3 stappenplan en CSS interactie coderen.
 
 Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten, en of de actie gelukt is. 
 
-Je gaat de interactie coderen met HTML, CSS en JS. Tijdens de code/design review komende vrijdag krijg je feedback op je code. Volgende week vrijdag ga je jouw interactie leren testen met een _User Test_.
+Een interactie codeer je met HTML, CSS en JS. Tijdens de code/design review komende vrijdag krijg je feedback op je code. Volgende week vrijdag ga je jouw interactie leren testen met een _User Test_.
 
 
 ## De Console en het Document Object Model (DOM)
 
-Voordat we weer verder gaan met zelf JavaScript schrijven, heb je nog een aantal tools en inzichten nodig. De _Console_ van je browser developer tools ga je veel zien, dus laten we daar eerst in duiken, net als in week 1 van de opleiding.
+Voordat we zelf JavaScript gaan schrijven, heb je nog een aantal tools en inzichten nodig. De _Console_ van je browser developer tools ga je veel zien, dus laten we daar eerst in duiken, net als in week 1 van de opleiding.
 
 De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een micro-interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden. In je developer tools en in de Console kun je de DOM onderzoeken.
 
@@ -22,7 +22,7 @@ Het _inspecteren_ van elementen heb je dus al vaak gedaan. Als je in de Inspecto
 <img width="812" height="528" alt="image" src="https://github.com/user-attachments/assets/55558649-cce4-48a6-9d95-c7a60990f7c3" />
 
 
-### Opdrachten
+### Opdrachten Console en DOM
 
 Ga in de browser naar je eigen project, open de Console en schrijf op het whiteboard uit hoeveel elementen de pagina waar je aan werkt bestaat. Dit kun je doen door `document.querySelectorAll('*').length` uit te voeren.
 
@@ -48,7 +48,10 @@ Tik `document.` in je Console, en scroll door de lijst met suggesties. Schrijf o
 
 ## Het 3 stappenplan, waarmee je (bijna) alles kan
 
-Stap 1 van ons stappenplan is het _selecteren_ van een geschikt element, waarmee we onze interactie gaan _activeren_. Je wilt bijvoorbeeld dat als iemand op een button klikt (of deze met het toetsenbord activeert), er iets gebeurt op de pagina. Je HTML ziet er bijvoorbeeld zo uit:
+Om een interactie te coderen gebruik je in javascript het 3 stappenplan. Eerst moet je het element in de DOM selecteren waar je iets mee wil, daarna koppel je daar een event aan, daarna kan je met een CSS class feedback tonen. 
+
+### Stap 1: Element in de DOM selecteren
+Stap 1 van ons stappenplan is het _selecteren_ van een geschikt element, waarmee je de interactie gaat _activeren_. Je wilt bijvoorbeeld dat als iemand op een button klikt (of deze met het toetsenbord activeert), er iets gebeurt op de pagina. Je HTML ziet er bijvoorbeeld zo uit:
 
 ```html
 <button class="show-more">Toon meer</button>
@@ -85,6 +88,7 @@ let showMoreButton = document.querySelector('.show-more');
 
 Aan de `document.querySelector()` _functie_ geef je dus een _CSS selector_ mee als _string_ (tussen 'aanhalingstekens'). Dit kan _elke_ selector zijn die je ook in CSS kunt gebruiken. Vervolgens kun je hier iets mee doen.
 
+### Stap 2: Event koppelen
 Stap 2: Wacht tot de gebruiker ook echt iets doet. In veel gevallen gaat dit om wachten op het _click event_; je wilt dat er iets gebeurt als iemand op jouw button klikt. Hiervoor kun je met `addEventListener()` een _event_ toevoegen aan jouw element. Komende maandag gaan we hier dieper op in, maar voor nu is het belangrijk om dit te begrijpen:
 
 ```js
@@ -105,6 +109,7 @@ showMoreButton.addEventListener('click', function() {
 
 En waarschijnlijk zijn er nog meer manieren waarop je dit kunt doen. Maar de basis voor stap 2 is `addEventListener`, een _event_ (vaak `'click'`), en een _callback_ functie, die later aangeroepen wordt.
 
+### Stap 3: Feedback tonen met een CSS class
 In Stap 3 geef je feedback aan de gebruiker. Vaak doe je dit door iets te veranderen op de pagina, iets toe te voegen, iets te animeren, ergens heen te scrollen, iets te openen, een geluidje af te spelen, etc. In de meeste gevallen wil je de CSS van een bepaald HTML element veranderen, of een _class_ aan- of uitzetten.
 
 Je weet dat je op elk HTML element een _class_ kunt zetten. En misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ classes (vaak met maar één class). Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
@@ -130,7 +135,7 @@ showMoreButton.addEventListener('click', function() {
 
 In CSS _matcht_ nu de `show-info` class ook, waardoor de `<p>` getoond wordt. In JavaScript heb je dus vaak maar een paar regels code nodig om iets interactiefs te maken. Transities en animaties kun je verder helemaal in CSS doen. En je kunt je volledig richten op goede en duidelijke feedforward en feedback. Uiteindelijk maak je de dingen voor eindgebruikers.
 
-### Opdracht
+### Opdracht het 3 stappenplan in de console
 
 Selecteer via de Console, met behulp van `document.querySelector()`, het element waarop je jouw interactie wilt laten werken, en toggle een class op dat element, door de `classList` te gebruiken. Controleer of dat gelukt is via de Inspector.
 
@@ -259,7 +264,7 @@ tableOfContents.classList.add('highlighted');
 
 De code was dus niet fout, het deed alleen net iets anders dan je verwachtte. Leer jezelf het gebruik van `console.log()` in je code aan, en test regelmatig je werk.
 
-### Opdrachten
+### Opdrachten interactie coderen 
 
 Schrijf het plan voor je micro-interactie in _comments_ uit in je JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt—of ChadGPT al iets voor je hebt laten schrijven—is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
 
