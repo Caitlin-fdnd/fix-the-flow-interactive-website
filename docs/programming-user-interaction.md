@@ -89,8 +89,10 @@ let showMoreButton = document.querySelector('.show-more');
 
 Aan de `document.querySelector()` _functie_ geef je dus een _CSS selector_ mee als _string_ (tussen 'aanhalingstekens'). Dit kan _elke_ selector zijn die je ook in CSS kunt gebruiken. Vervolgens kun je hier iets mee doen.
 
+De basis voor Stap 1 is dus het _selecteren_ van het element die de interactie laat beginnen.
+
 ### Stap 2: Event koppelen
-Stap 2: Wacht tot de gebruiker ook echt iets doet. In veel gevallen gaat dit om wachten op het _click event_; je wilt dat er iets gebeurt als iemand op jouw button klikt. Hiervoor kun je met `addEventListener()` een _event_ toevoegen aan jouw element. Komende maandag gaan we hier dieper op in, maar voor nu is het belangrijk om dit te begrijpen:
+Stap 2: Wacht tot de gebruiker ook echt iets doet. In veel gevallen gaat dit om wachten op het _click event_; je wilt dat er iets gebeurt als iemand op jouw button klikt. Hiervoor kun je met `addEventListener()` een _event_ toevoegen aan jouw element. Komende maandag gaan we hier dieper op in met de UI Events deeltaak, maar voor nu is het belangrijk om dit te begrijpen:
 
 ```js
 let doSomething = function() {
@@ -108,12 +110,12 @@ showMoreButton.addEventListener('click', function() {
 });
 ```
 
-En waarschijnlijk zijn er nog meer manieren waarop je dit kunt doen. Maar de basis voor stap 2 is `addEventListener`, een _event_ (vaak `'click'`), en een _callback_ functie, die later aangeroepen wordt.
+De basis voor Stap 2 is dus `addEventListener`, een _event_ (vaak `'click'`), en een _callback_ functie, die pas later aangeroepen wordt.
 
 ### Stap 3: Feedback tonen met een CSS class
-In Stap 3 geef je feedback aan de gebruiker. Vaak doe je dit door iets te veranderen op de pagina, iets toe te voegen, iets te animeren, ergens heen te scrollen, iets te openen, een geluidje af te spelen, etc. In de meeste gevallen wil je de CSS van een bepaald HTML element veranderen, of een _class_ aan- of uitzetten.
+In Stap 3 geef je feedback aan de gebruiker. Dit kun je doen door bijvoorbeeld iets te veranderen op de pagina, iets toe te voegen, iets te animeren, ergens heen te scrollen, iets te openen, een geluidje af te spelen, etc. In de meeste gevallen wil je de styling van een bepaald HTML element veranderen, of een _class_ aan- of uitzetten.
 
-Je weet dat je op elk HTML element een _class_ kunt zetten. En misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ classes (vaak met maar één class). Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
+Je weet dat je op elk HTML element een _class_ kunt zetten. En misschien inmiddels ook dat je _meerdere_ classes op een HTML kunt zetten, bijvoorbeeld: `<section class="about font-large">...</section>`. Elk element heeft dus een _lijst_ classes (ook al is het er vaak maar één). Via de `classList` _property_ van een DOM element, heb je in JavaScript toegang tot die lijst. Een aantal voorbeelden:
 
 ```js
 document.body.classList.add('dark-mode'); // → <body class="dark-mode">
@@ -126,19 +128,22 @@ document.querySelector('h1').classList.toggle('highlighted'); // → <h1 class="
 In dit geval willen we waarschijnlijk zoiets:
 
 ```js
+// Stap 1
 let showMoreButton = document.querySelector('.show-more');
-let infoText = document.querySelector('.info');
 
+// Stap 2
 showMoreButton.addEventListener('click', function() {
-    infoText.classList.add('info-visible');
+
+    // Stap 3
+    document.querySelector('.info').classList.add('info-visible');
 });
 ```
 
-In CSS _matcht_ nu de `info-visible` class ook, waardoor de `<p>` getoond wordt. In JavaScript heb je dus vaak maar een paar regels code nodig om iets interactiefs te maken. Transities en animaties kun je verder helemaal in CSS doen. En je kunt je volledig richten op goede en duidelijke feedforward en feedback. Uiteindelijk maak je de dingen voor eindgebruikers.
+In CSS _matcht_ na klikken op de button de `info-visible` class ook, waardoor de `<p>` getoond wordt. In JavaScript heb je dus vaak maar een paar regels code nodig om iets interactiefs te maken. Transities en animaties kun je verder helemaal in CSS doen. En je kunt je volledig richten op goede en duidelijke feedforward en feedback. Uiteindelijk maak je de dingen voor eindgebruikers.
 
 ### Opdracht het 3 stappenplan in de console
 
-Selecteer via de Console, met behulp van `document.querySelector()`, het element waarop je jouw interactie wilt laten werken, en toggle een class op dat element, door de `classList` te gebruiken. Controleer of dat gelukt is via de Inspector.
+Selecteer via de Console, met behulp van `document.querySelector()`, het element waarop je jouw interactie wilt laten werken, en toggle een `class` op dat element, door de `classList` te gebruiken. Controleer of dat gelukt is via de Inspector.
 
 ### Bronnen
 
