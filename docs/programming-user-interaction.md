@@ -21,7 +21,6 @@ Het _inspecteren_ van elementen heb je dus al vaak gedaan. Als je in de Inspecto
 
 <img width="1624" height="1056" alt="image" src="https://github.com/user-attachments/assets/55558649-cce4-48a6-9d95-c7a60990f7c3" />
 
-
 ### Opdrachten
 
 Ga in de browser naar je eigen project, open de Console en schrijf op het whiteboard uit hoeveel elementen de pagina waar je aan werkt bestaat. Dit kun je doen door `document.querySelectorAll('*').length` uit te voeren.
@@ -40,15 +39,13 @@ Tik `document.` in je Console, en scroll door de lijst met suggesties. Schrijf o
 
 💪 Toe aan een uitdaging? Kijk eens of je met `document.documentElement.style.setProperty()` een custom property uit CSS aan kunt passen.
 
-<img width="1624" height="1056" alt="image" src="https://github.com/user-attachments/assets/9e23b0f8-2668-4f23-b4b6-35deafdc0378" />
-
-
 ### Bronnen
 
 - [console @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console)
 - [console.log() @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console/log_static)
 - [Introduction to the DOM @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
+<img width="1624" height="1056" alt="image" src="https://github.com/user-attachments/assets/9e23b0f8-2668-4f23-b4b6-35deafdc0378" />
 
 ## Het 3 stappenplan, waarmee je (bijna) alles kan
 
