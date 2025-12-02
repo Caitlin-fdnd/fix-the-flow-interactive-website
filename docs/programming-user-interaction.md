@@ -8,18 +8,18 @@ Leer met het JavaScript 3 stappenplan en CSS interactie coderen.
 
 Als een gebruiker interactie heeft met een website, moet je goede feedback/feedforward ontwerpen en maken. Zo weet een gebruiker wat die kan verwachten, en of de actie gelukt is. 
 
-Een interactie codeer je met HTML, CSS en JS. Tijdens de code/design review komende vrijdag krijg je feedback op je code. Volgende week vrijdag ga je jouw interactie leren testen met een _User Test_.
+Je gaat de interactie uit jouw _user story_ coderen met HTML, CSS en JS. Tijdens de code/design review komende vrijdag krijg je feedback op je code. Volgende week vrijdag ga je jouw interactie leren testen met een _User Test_.
 
 
 ## De Console en het Document Object Model (DOM)
 
 Voordat we zelf JavaScript gaan schrijven, heb je nog een aantal tools en inzichten nodig. De _Console_ van je browser developer tools ga je veel zien, dus laten we daar eerst in duiken, net als in week 1 van de opleiding.
 
-De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een micro-interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden. In je developer tools en in de Console kun je de DOM onderzoeken.
+De afgelopen vier sprints heb je voornamelijk gewerkt met HTML en CSS. Met HTML bouw je zoals je weet _documenten_, en met JavaScript gaan we een interactie toevoegen aan die documenten. Met JavaScript heb je toegang tot het volledige _Document Object Model_ (de _DOM_). Alle HTML die je schrijft, wordt als een boomstructuur (een _tree_) door de browser intern bijgehouden. In je developer tools en in de Console kun je de DOM onderzoeken.
 
 Het _inspecteren_ van elementen heb je dus al vaak gedaan. Als je in de Inspector een element selecteert, krijg je hier in de Console een referentie heen, via een _variabele_ genaamd `$0`. Je kunt hiermee de DOM onderzoeken.
 
-<img width="812" height="528" alt="image" src="https://github.com/user-attachments/assets/55558649-cce4-48a6-9d95-c7a60990f7c3" />
+<img width="1624" height="1056" alt="image" src="https://github.com/user-attachments/assets/55558649-cce4-48a6-9d95-c7a60990f7c3" />
 
 
 ### Opdrachten Console en DOM
@@ -28,7 +28,7 @@ Ga in de browser naar je eigen project, open de Console en schrijf op het whiteb
 
 Zorg dat je in de Console een lijst van alle _kinderen_ uit je `<head>` element te zien krijgt, door `document.querySelector('head').children` uit te voeren.
 
-Inspecteer het element waarmee je je micro-interactie wilt activeren (waarschijnlijk een button). Als je die nog niet hebt, inspecteer dan een ander willekeurig element. Ga naar de Console en typ `console.log($0)`.
+Inspecteer het element waarmee je de interactie van jouw user story wilt _activeren_ (waarschijnlijk een button). Als je die nog niet hebt, inspecteer dan een ander willekeurig element. Ga naar de Console en typ `console.log($0)`.
 
 Voer `$0.classList.add('awesome')` uit in de Console, en daarna weer `console.log($0)`. Schrijf op het whiteboard welke classes er nu op je element staan.
 
@@ -38,6 +38,7 @@ Voer `$0.textContent = 'JS is nog steeds tof!'` uit.
 
 Tik `document.` in je Console, en scroll door de lijst met suggesties. Schrijf op het whiteboard uit die lijst een term waar je meer over wilt weten.
 
+💪 Toe aan een uitdaging? Kijk eens of je met `document.documentElement.style.setProperty()` een custom property uit CSS aan kunt passen.
 
 ### Bronnen
 
@@ -45,6 +46,7 @@ Tik `document.` in je Console, en scroll door de lijst met suggesties. Schrijf o
 - [console.log() @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/console/log_static)
 - [Introduction to the DOM @ MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
+<img width="1624" height="1056" alt="image" src="https://github.com/user-attachments/assets/9e23b0f8-2668-4f23-b4b6-35deafdc0378" />
 
 ## Het 3 stappenplan, waarmee je (bijna) alles kan
 
@@ -241,7 +243,7 @@ tableOfContents.classList.add('highlighted');
         }
     }
 }
-/* Mijn micro-interactie geeft de inhoudsopgave straks een gele fade.. */
+/* Mijn interactie geeft de inhoudsopgave straks een gele fade.. */
 section ul.highlighted {
     background: yellow;
 }
@@ -266,7 +268,7 @@ De code was dus niet fout, het deed alleen net iets anders dan je verwachtte. Le
 
 ### Opdrachten interactie coderen 
 
-Schrijf het plan voor je micro-interactie in _comments_ uit in je JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt—of ChadGPT al iets voor je hebt laten schrijven—is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
+Schrijf het plan voor je interactie in _comments_ uit in je JavaScript bestand, dat je via een `<script>` tag linkt aan je code. Als je al JavaScript uit een eerdere (video) tutorial hebt—of ChadGPT al iets voor je hebt laten schrijven—is dit het moment om dat weg te gooien, opnieuw te beginnen, en nieuwe dingen te leren.
 
 Vraag op het plan dat je in comments uitgeschreven hebt feedback van een docent of mentor. Werk je interactie uit aan de hand van het 3 stappenplan. Laat je comments gewoon staan bij je code, zodat je inzichtelijk maakt hoe je te werk bent gegaan, en eventuele (denk)foutjes makkelijk terug kunt vinden.
 
