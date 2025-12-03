@@ -15,16 +15,54 @@
 .hidden {
   display: none;
 }
+
+.show {
+  display: block;
+}
 </style>
 
 <script>
   let bewonersButton = document.querySelector('.Bewoners-button');
 
   bewonersButton.addEventListener('click', function() {
-    // Verberg Wijkpartners
+    // Verberg de andere doelgroepen
+    document.querySelector('.Bewoners').classList.toggle('show');
     document.querySelector('.Wijkpartners').classList.toggle('hidden');
     document.querySelector('.Studenten').classList.toggle('hidden');
     document.querySelector('.Medewerkers').classList.toggle('hidden');
+    
+  });
+
+    let wijkpartnersButton = document.querySelector('.Wijkpartners-button');
+
+  wijkpartnersButton.addEventListener('click', function() {
+    // Verberg de andere doelgroepen
+    document.querySelector('.Wijkpartners').classList.toggle('show');
+    document.querySelector('.Bewoners').classList.toggle('hidden');
+    document.querySelector('.Studenten').classList.toggle('hidden');
+    document.querySelector('.Medewerkers').classList.toggle('hidden');
+    
+  });
+
+   let studentenButton = document.querySelector('.Studenten-button');
+
+  studentenButton.addEventListener('click', function() {
+    // Verberg de andere doelgroepen
+    document.querySelector('.Studenten').classList.toggle('show');
+    document.querySelector('.Wijkpartners').classList.toggle('hidden');
+    document.querySelector('.Bewoners').classList.toggle('hidden');
+    document.querySelector('.Medewerkers').classList.toggle('hidden');
+    
+  });
+
+   let medewerkersButton = document.querySelector('.Medewerkers-button');
+
+  medewerkersButton.addEventListener('click', function() {
+    // Verberg de andere doelgroepen
+    document.querySelector('.Medewerkers').classList.toggle('show');
+    document.querySelector('.Bewoners').classList.toggle('hidden');
+    document.querySelector('.Studenten').classList.toggle('hidden');
+    document.querySelector('.Wijkpartners').classList.toggle('hidden');
     
   });
 </script>
