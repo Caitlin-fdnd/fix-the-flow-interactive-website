@@ -1,12 +1,31 @@
-<ul>
-  <li>Bewoners</li>
-  <li>Wijkpartners</li>
-  <li>Studenten</li>
-  <li>Hva medewerkers</li>
-  </ul>
+<body>
+<ul class="Doelgroep-lijst">
+  <li><button class="Bewoners-button">Bewoners</button></li>
+  <li><button class="Wijkpartners-button">Wijkpartners</button></li>
+  <li><button class="Studenten-button">Studenten</button></li>
+  <li><button class="Medewerkers-button">Hva medewerkers</button></li>
+</ul>
 
-  <H2 class="Bewoners art.">Bewoners</H2>
-  <H2 class="Wijkpartners art.">Wijkpartners</H2>
-  <H2 class="Studenten art.">Studenten</H2>
-  <H2 class="BHva medewerkers art.">Hva medewerkers
-  </H2>
+<h2 class="Bewoners art">Bewoners</h2>
+<h2 class="Wijkpartners art">Wijkpartners</h2>
+<h2 class="Studenten art">Studenten</h2>
+<h2 class="Medewerkers art">Hva-medewerkers</h2>
+
+<style>
+.hidden {
+  display: none;
+}
+</style>
+
+<script>
+  let bewonersButton = document.querySelector('.Bewoners-button');
+
+  bewonersButton.addEventListener('click', function() {
+    // Verberg Wijkpartners
+    document.querySelector('.Wijkpartners').classList.toggle('hidden');
+    document.querySelector('.Studenten').classList.toggle('hidden');
+    document.querySelector('.Medewerkers').classList.toggle('hidden');
+    
+  });
+</script>
+</body>
