@@ -1,69 +1,149 @@
 <body>
-<ul class="Doelgroep-lijst">
-  <li><button class="Bewoners-button">Bewoners</button></li>
-  <li><button class="Wijkpartners-button">Wijkpartners</button></li>
-  <li><button class="Studenten-button">Studenten</button></li>
-  <li><button class="Medewerkers-button">Hva medewerkers</button></li>
-</ul>
+  <section class="uitklap-filter">
+    <H3>Wie ben jij?</H3>
+    <section class="uitklap-items">
+      <button class="Bewoners-button filterbutton">Bewoners</button>
+      <button class="Wijkpartners-button filterbutton">Wijkpartners</button>
+      <button class="Studenten-button filterbutton">Studenten</button>
+      <button class="Medewerkers-button filterbutton">Hva</button>
+    </section>
+  </section>
 
-<h2 class="Bewoners art">Bewoners</h2>
-<h2 class="Wijkpartners art">Wijkpartners</h2>
-<h2 class="Studenten art">Studenten</h2>
-<h2 class="Medewerkers art">Hva-medewerkers</h2>
+  <h2 class="Bewoners art">Bewoners</h2>
+  <h2 class="Wijkpartners art">Wijkpartners</h2>
+  <h2 class="Studenten art">Studenten</h2>
+  <h2 class="Medewerkers art">Hva-medewerkers</h2>
+  <h2 class="Bewoners art">Bewoners</h2>
+  <h2 class="Wijkpartners art">Wijkpartners</h2>
+  <h2 class="Studenten art">Studenten</h2>
+  <h2 class="Medewerkers art">Hva-medewerkers</h2>
 
-<style>
-.hidden {
-  display: none;
-}
+  <style>
+    H3 {
+      appearance: none;
+      font-size: 1em;
+      border-radius: 100px;
+      border-color: #EA5B0B;
+      border-style: solid;
+      border-width: 0.2em;
+      height: 1.5em;
+      width: 7em;
+      transition: all .2s ease-in, width .6s;
+      padding-left: 2.3em;
+      padding-top: .5em;
+      box-shadow: lch(21.9% 0.93 19.36) 0 0px 5px;
+      color: white;
+      background-color: #EA5B0B;
+      background-image: url("assets/filterimg.png");
+      background-size: 1.4em auto;
+      background-repeat: no-repeat;
+      background-position: .550em center;
 
-.show {
-  display: block;
-}
-</style>
+      &:focus,
+      &:active,
+      &:hover {
+        outline-width: 0.9em;
+        width: 90%;
+        filter: brightness(1.2);
+      }
+    }
 
-<script>
-  let bewonersButton = document.querySelector('.Bewoners-button');
+    .uitklap-filter {
+      position: relative;
 
-  bewonersButton.addEventListener('click', function() {
-    // Verberg de andere doelgroepen
-    document.querySelector('.Bewoners').classList.toggle('show');
-    document.querySelector('.Wijkpartners').classList.toggle('hidden');
-    document.querySelector('.Studenten').classList.toggle('hidden');
-    document.querySelector('.Medewerkers').classList.toggle('hidden');
-    
-  });
+      button {
+        display: inline;
+      }
+
+      &:hover h3 {
+        width: 90%;
+        filter: brightness(1.2);
+      }
+
+      &:hover .uitklap-items {
+        opacity: 1;
+        transform: translateX(1em);
+        pointer-events: auto;
+        filter: brightness(1.2);
+      }
+
+      .uitklap-items {
+        opacity: 0;
+        margin-left: 7em;
+        margin-top: -3.1em;
+        transition: all .3s ease;
+      }
+
+    }
+
+    .filterbutton {
+
+      font-size: 1em;
+      border-radius: 100px;
+      border-color: #EA5B0B;
+      border-style: solid;
+      border-width: 0.2em;
+      background-color: #EA5B0B;
+      color: white;
+      height: 1.5em;
+      width: 6em;
+      margin: .2em;
+      cursor: pointer;
+
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .show {
+      display: block !important;
+    }
+  </style>
+
+  <script>
+    let bewonersButton = document.querySelector('.Bewoners-button');
+
+    bewonersButton.addEventListener('click', function () {
+      // Verberg de andere doelgroepen
+      document.querySelector('.Bewoners').classList.toggle('show');
+      document.querySelector('.Wijkpartners').classList.toggle('hidden');
+      document.querySelector('.Studenten').classList.toggle('hidden');
+      document.querySelector('.Medewerkers').classList.toggle('hidden');
+
+    });
 
     let wijkpartnersButton = document.querySelector('.Wijkpartners-button');
 
-  wijkpartnersButton.addEventListener('click', function() {
-    // Verberg de andere doelgroepen
-    document.querySelector('.Wijkpartners').classList.toggle('show');
-    document.querySelector('.Bewoners').classList.toggle('hidden');
-    document.querySelector('.Studenten').classList.toggle('hidden');
-    document.querySelector('.Medewerkers').classList.toggle('hidden');
-    
-  });
+    wijkpartnersButton.addEventListener('click', function () {
+      // Verberg de andere doelgroepen
+      document.querySelector('.Wijkpartners').classList.toggle('show');
+      document.querySelector('.Bewoners').classList.toggle('hidden');
+      document.querySelector('.Studenten').classList.toggle('hidden');
+      document.querySelector('.Medewerkers').classList.toggle('hidden');
 
-   let studentenButton = document.querySelector('.Studenten-button');
+    });
 
-  studentenButton.addEventListener('click', function() {
-    // Verberg de andere doelgroepen
-    document.querySelector('.Studenten').classList.toggle('show');
-    document.querySelector('.Wijkpartners').classList.toggle('hidden');
-    document.querySelector('.Bewoners').classList.toggle('hidden');
-    document.querySelector('.Medewerkers').classList.toggle('hidden');
-    
-  });
+    let studentenButton = document.querySelector('.Studenten-button');
 
-   let medewerkersButton = document.querySelector('.Medewerkers-button');
+    studentenButton.addEventListener('click', function () {
+      // Verberg de andere doelgroepen
+      document.querySelector('.Studenten').classList.toggle('show');
+      document.querySelector('.Wijkpartners').classList.toggle('hidden');
+      document.querySelector('.Bewoners').classList.toggle('hidden');
+      document.querySelector('.Medewerkers').classList.toggle('hidden');
 
-  medewerkersButton.addEventListener('click', function() {
-    // Verberg de andere doelgroepen
-    document.querySelector('.Medewerkers').classList.toggle('show');
-    document.querySelector('.Bewoners').classList.toggle('hidden');
-    document.querySelector('.Studenten').classList.toggle('hidden');
-    document.querySelector('.Wijkpartners').classList.toggle('hidden');
-    
-  });
-</script>
+    });
+
+    let medewerkersButton = document.querySelector('.Medewerkers-button');
+
+    medewerkersButton.addEventListener('click', function () {
+      // Verberg de andere doelgroepen
+      document.querySelector('.Medewerkers').classList.toggle('show');
+      document.querySelector('.Bewoners').classList.toggle('hidden');
+      document.querySelector('.Studenten').classList.toggle('hidden');
+      document.querySelector('.Wijkpartners').classList.toggle('hidden');
+
+    });
+  </script>
 </body>
