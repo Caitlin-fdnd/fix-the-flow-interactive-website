@@ -221,6 +221,10 @@ H3 {
         margin-left: 7em;
         margin-top: -1.7em;
         transition: all .3s ease;
+
+        &:focus-within {
+            opacity: 1;
+        }
     }
 
 }
@@ -238,6 +242,10 @@ H3 {
     width: 9em;
     margin: .2em;
     cursor: pointer;
+
+    &:hover, &:focus-within {
+        text-decoration: underline;
+    }
 
 }
 
@@ -328,6 +336,12 @@ H3 {
     width: 250px;
     height: auto;
     z-index: 1100;
+    transition: .1s;
+
+    &:hover, &:focus {
+        filter: brightness(1.2);
+        transform: scale(1.1) translateY(-10px);
+    }
 }
 
 #towerZO,
