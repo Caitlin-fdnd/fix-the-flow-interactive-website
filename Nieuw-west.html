@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://webtins.github.io/look-and-feel-styleguide/styleguide-buurtcampuskrant.css">
-  <link rel="stylesheet" href="stylesN.css">
-  <link rel="text/javascript" href="filterknop.js">
+  <link rel="stylesheet" href="index.css">
   <Title> Buurtcampus nieuwspagina</Title>
 
 </head>
@@ -35,7 +34,7 @@
       <section class="dropdown-menu" tabindex="0">
         <img src="assets/compass2.png" alt="Dropdown menu" class="dropdown-img">
         <section class="dropdown-items" tabindex="0">
-          <a href="Index.html">Algemeen</a>
+          <a href="index.html">Algemeen</a>
           <a href="Nieuw-west.html">Nieuw-west</a>
           <a href="Oost.html">Oost</a>
           <a href="Zuidoost.html">Zuidoost</a>
@@ -46,7 +45,7 @@
 
     <main>
 
-      <div class="news-title">
+      <div class="news-title" id="Title-nw">
         <H1> Nieuws! </H1>
         <span> Nieuw-west </span>
       </div>
@@ -62,71 +61,67 @@
       </section>
 
       <section class="nieuws-section">
-        <Article class="left-article">
-          <img src="assets/OBA-HVA.jpg" alt="Foto Tanja interview" class="article-img">
-          <span class="datum">33-3-3333</span>
-          <H2>In gesprek met stadsdeelvoorzitter Tanja Jadnanansing: een inspirerend gastcollege over
-            rechtvaardigheid en bestuur.</H2>
-          <p>Tanja Jadnanansing, voorzitter van het bestuur in stadsdeel Zuidoost, geeft jaarlijks een
-            gastles aan studenten Bestuurskunde tijdens het vak De Rechtvaardige Stad. Ze bespreekt
-            haar visie op rechtvaardigheid en de rol van bestuurders in onze samenleving,
-            en reflecteert op ervaringen en inzichten die ze graag doorgeeft aan studenten. </p>
-
-          <a href="article.html" class="knopje"> Lees meer</a>
-        </Article>
-
-        <Article class="right-article">
-          <img src="assets/OBA-HVA.jpg" alt="Groepsfoto Motuin & Hoektuin" class="article-img">
-          <span class="datum">33-3-3333</span>
-          <H2>Motuin & Hoektuin: De groene verbinders van de Transvaalbuurt.</H2>
-          <p>Het is een nazomermiddag in de Hoektuin en Sameena Safiruddin, een van de oprichters van
-            deze groene oase in de stad, zet thee van zelfgeplukte
-            kruiden voor ons neer. Zij en Eelco
-            Baarda, vaste vrijwilliger bij meerdere tuinen in Oost, vormen het kloppende hart van deze
-            zeldzame stadstuin. </p>
-
-          <a href="article.html" class="knopje"> Lees meer</a>
-        </Article>
-
-        <Article class="left-article">
-          <img src="assets/OBA-HVA.jpg" alt="Oba & Hva" class="article-img">
-          <span class="datum">33-3-3333</span>
-          <H2>De OBA en de HvA zetten zich samen in voor de wijk:
-            ‘
-            Het is heel belangrijk dat je met elkaar
-            goed voor de stad zorgt, en vooral voor de mensen die dat het hardst nodig hebben
-            ’</H2>
-          <p>De Openbare Bibliotheek Amsterdam (OBA) en de Hogeschool van
-            Amsterdam (HvA) werken
-            sinds 2021 intensief met elkaar samen. De Buurtcampus
+        
+        <Article class="news-article Bewoners Nieuw-West">
+          <img src="assets/IMG_4245 2.JPG" alt="Foto top 3 baklava" class="article-img">
+          <span class="datum">04-11-2024</span>
+          <H2>Op zoek naar de beste baklava in Nieuw
             -
-            locaties zijn gevestigd in wijklocaties
-            van de bibliotheek. Daar worden activiteiten voor bewoners georganiseerd, zoals
-            voorleesactiviteiten voor kinderen of ‘Bakkie in de Bieb’: een wekelijkse koffie-moment waarbij bewoners en
-            studenten elkaar ontmoeten.</p>
-
-          <a href="article.html" class="knopje"> Lees meer</a>
-        </Article>
-
-        <Article class="right-article">
-          <img src="assets/nieuwe-look.gif" alt="Gif buurtcampus interieur" class="article-img">
-          <span class="datum">33-3-3333</span>
-          <H2>De nieuwe look van de Buurtcampus:‘Deze plek is de huiskamer van de stad’
+            West: Aziz en Meryem testen de heerlijkste baklava
+            uit de buurt
           </H2>
-          <p>De Buurtcampus werkt samen met de Openbare Bibliotheek Amsterdam (OBA) en is sinds
-            deze samenwerking gevestigd op drie bibliotheeklocaties: OBA Linnaeus in Oost,
-            OBA Ganzenhoef in Zuidoost, en OBA Geuzenveld in Nieuw-West. Rinke van Couwelaar is oud-projectleider bij de
-            Buurtcampus en inmiddels met pensioen. Hij vertelt graag over het
-            uiterlijk van de Buurtcampus en welke ideeën daarachter schuilgaan. </p>
+          <p>Buurtbewoners Aziz van het Pluspunt en Meryem, werkzaam bij Eigenwijks, testen samen de
+            lekkerste baklava uit de buurt. </p>
 
           <a href="article.html" class="knopje"> Lees meer </a>
         </Article>
+
+        <Article class="news-article Bewoners Nieuw-West">
+          <video autoplay muted width="230">
+            <source src="assets/Buurtcampus_NIEUWWEST.mp4" type="video/mp4">
+          </video>
+          <span class="datum">29-10-2024</span>
+          <H2>Buurtcampus Nieuw - West:
+            ‘Wij zitten in de haarvaten van de wijk'
+          </H2>
+          <p>De Buurtcampus in Nieuw
+            -
+            West is gevestigd in de bibliotheek (OBA) in Geuzenveld. Vroeg in
+            de ochtend, nog voordat de bieb opengaat, is het al een drukte van jewelste.
+            Buurtbewoners,
+            studenten en medewerkers worden, zo gauw ze over de drempel stappen, vrolijk begroet
+            door de baliemedewerker.
+            ‘
+            Nog twee minuutjes!
+            ’ </p>
+
+          <a href="article.html" class="knopje"> Lees meer </a>
+        </Article>
+
+        <Article class="news-article Bewoners Nieuw-West">
+          <img src="assets/WhatsApp Image 2024-11-06 at 14.09.52.jpeg" alt="Foto Hasan" class="article-img">
+          <span class="datum">06-11-2024</span>
+          <H2>Een Buurtheld uit Nieuw-west: ontmoet Hasan Kaya
+          </H2>
+          <p>Hasan
+            Kaya
+            –
+            ook wel meneer Kaya genoemd
+            –
+            doet de fietsverkoop, het onderhoud,
+            reparaties en is slotenmaker bij zijn eigen fietsenwinkel, Tegendraads. De naam zegt het al:
+            meneer Kaya houdt ervan om de dingen nét even iets anders te doen</p>
+
+          <a href="article.html" class="knopje"> Lees meer </a>
+        </Article>
+
+        
       </section>
 
     </main>
 
-    <a href="Index.html">
-      <img src="assets/Toren_Blurple_5.png" alt="Algemene toren logo" class="tower">
+    <a href="index.html">
+      <img src="assets/Toren_Blurple_4.png" alt="Algemene toren logo" class="tower" id="towerNW">
     </a>
 
     <script src="filterknop.js"></script>

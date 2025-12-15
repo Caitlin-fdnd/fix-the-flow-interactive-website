@@ -83,6 +83,7 @@ header {
 
 .dropdown-menu {
     position: relative;
+    z-index: 1000;
 
     a {
         display: block;
@@ -90,6 +91,7 @@ header {
         padding: 10px 15px;
         text-decoration: none;
         transition: all .3s ease;
+        z-index: 1000;
 
 
         &:hover,
@@ -115,7 +117,7 @@ header {
 .dropdown-items {
     position: absolute;
     top: 100%;
-    right: -0.1em;
+    right: .1em;
     min-width: 140px;
     margin-top: 0;
 
@@ -274,6 +276,27 @@ H3 {
         transform: translateY(15em);
         margin-top: 3em;
     }
+
+    .Oost {
+        border: solid 2px var(--secondaryAccent);
+    background-color: var(--paarsBlauw);
+    color: var(--primaryAccent);
+    }
+    .Nieuw-West{
+        border: solid 2px var(--bosGroen);
+    background-color: var(--mosGroen);
+    color: var(--secondaryAccent);
+    }
+    .Zuidoost{
+        border: solid 2px var(--secondaryAccent);
+    background-color: var(--zee);
+    color: var(--primaryAccent);
+    }
+    .Algemeen{
+        border: solid 2px var(--modder);
+    background-color: var(--kauwgomRoze);
+    color: var(--secondaryAccent);
+    }
 }
 
 .news-article {
@@ -281,34 +304,38 @@ H3 {
     max-width: 35.5em;
     padding: 1em;
     border-radius: 20px;
-    border: solid 2px hsl(186, 100%, 8%);
-    background-color: var(--zee);
-    color: var(--primaryAccent);
     box-shadow: #9c9b9b 3px 10px 15px;
-    transition: transform 0.3s ease;
 
     H2 {
         margin-top: .3em;
         margin-bottom: .7em;
     }
-}
 
 
 .article-img {
     width: 230px;
     height: 170px;
-    border: 1px solid black;
     margin: 10px 0;
     margin-bottom: 0px;
+    border-radius: 5px;
+}
 }
 
 .tower {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100px;
+    bottom: -10px;
+    right: -55px;
+    width: 250px;
     height: auto;
-    z-index: 1000;
+    z-index: 1100;
+}
+
+#towerZO,
+#TowerO,
+#towerNW {
+    bottom: -39px;
+    width: 260px;
+    right: -60px;
 }
 
 footer {
